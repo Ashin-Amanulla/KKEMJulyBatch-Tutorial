@@ -4,7 +4,11 @@ const logger = require('morgan') // for seeing api calls in terminal
 const PORT = 8524
 const app = new express()
 
+
+require('dotenv').config()
+
 require('./middlewares/mongoDB') //to init mongoDB
+
 
 app.use(cors()) //to connect frontend and backend without any disturbance
 app.use(express.json()) // to recieve data from front end

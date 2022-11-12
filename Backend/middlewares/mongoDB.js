@@ -1,5 +1,5 @@
 const mongoose = require('mongoose') //db
-mongoose.connect('mongodb+srv://userone:userone@cluster0.vcc0q.mongodb.net/KKEMJuly?authSource=admin&replicaSet=atlas-s6513g-shard-0&readPreference=primary&ssl=true ', {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }). then(()=>{
